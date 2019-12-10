@@ -1,0 +1,173 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[hmargin=2cm,
+vmargin=3cm]{geometry}
+\usepackage{hyperref}
+\usepackage{authblk}
+\usepackage{blindtext}
+
+
+\begin{document}
+
+\title{Installation Sheet for DWSIM}
+\author{DWSIM Team}
+\affil{FOSSEE, IIT Bombay}
+\affil{\url{contact-dwsim@fossee.in}}
+\date{\today}
+
+\maketitle
+
+\section*{System Requirements}
+
+\subsection*{OS:}
+
+Windows: 32/64-bit Vista/7/8/10
+
+\noindent Linux: 64-bit x86 Ubuntu 12.04 or newer / 32-bit armhf Raspbian/Ubuntu MATE
+
+\noindent macOS: 10.7 (OS X Lion) or newer
+
+\subsection*{Software:}
+
+Microsoft .NET Framework 4.7.1 or newer (Windows) 
+
+\noindent Mono Framework 5.14.0 or newer (Linux)
+
+\subsection*{CPU:}
+1.0 GHz dual-core processor (minimum)
+
+\subsection*{Memory:}         
+
+2 GB RAM
+
+\subsection*{Graphics Card:}	
+
+128 MB with OpenGL hardware acceleration
+
+\subsection*{Display:}    
+
+1280x800 display resolution is recommended as a minimum
+
+\subsection*{Disk space:}	
+
+500 MB for program files
+
+\section{The procedure to install DWSIM on Windows OS}
+
+\begin{enumerate}
+\item Please make sure that you meet the system requirements to be able to download and install DWSIM.
+\item Open your default web browser.
+\item In the address bar, type the following URL and press Enter.\newline \url{https://sourceforge.net/projects/dwsim/files/DWSIM/}
+
+\item Click on the folder with latest version. Currently it is DWSIM 5.7.
+
+\item Click on the folder with latest update. Currently it is Update 14.
+\item Click on "DWSIM\_bin\_v57u14\_setup\_win7win8win10\_64bit.exe" (if it is 64 bit Operating System)
+\newline Click on "DWSIM\_bin\_v57u14\_setup\_win7win8win10\_32bit.exe" (if it is 32 bit Operating System)
+\item The .exe file gets downloaded and saved in the Downloads folder.
+\item Go to Downloads folder and double click on .exe file.
+\item In User Account Control window, click Yes.
+\item In Installer Language window,Click OK.
+\item DWSIM 5.5.7 Update 14 setup window appears. Click Next.
+\item In License Agreement section, click on I Agree.
+\item Click on Next.
+\item In Select components to install field, select all the components and click Next.
+\item Click on Next.
+\item Click on Install.
+\item In ChemSep 8.14 LITE Setup License Agreement section, click on I Agree.
+\item Click on Next.
+\item Click on Next.
+\item Click on Install.
+\item Click on Next.
+\item Click on Finish.
+\item Click on Next.
+\item Under CAPE-OPEN libraries, check the Accept License Agreement check box.
+\item Click on Next.
+\item Click on Next.
+\item Click on Install.
+\item Click on Finish.
+\item Click on Next.
+\item Click on Finish.
+\item DWSIM is successfully installed.
+
+\end{enumerate}
+
+\section{The procedure to install DWSIM on Linux OS}
+
+\begin{enumerate}
+\item Please make sure that you meet the system requirements to be able to download and install DWSIM.
+\item Open your default web browser.
+\item In the address bar, type the following URL and press Enter.\newline \url{https://sourceforge.net/projects/dwsim/files/DWSIM/}
+
+\item Click on the folder with latest version. Currently it is DWSIM 5.7.
+
+\item Click on the folder with latest update. Currently it is Update 14.
+\item Click on "dwsim\_5.7.14-amd64.deb"
+\item The file will be downloaded and saved in the default downloads folder
+\item Install Mono Framework version 5.14 or newer
+\newline \url{https://www.mono-project.com/download/stable/#download-lin}
+
+\item Open the terminal by pressing Ctrl + Alt + T keys together.
+
+\item Type the below command and press enter
+\newline sudo gdebi dwsim\_5.7.14-amd64.deb
+
+\item In the terminal, type dwsim.
+\item If DWSIM opens on your machine, then this means that DWSIM is successfully installed.
+
+\end{enumerate}
+
+\section{The procedure to install DWSIM on MacOS}
+
+\begin{enumerate}
+\item Please make sure that you meet the system requirements to be able to download and install DWSIM.
+\item Open your default web browser.
+\item In the address bar, type the following URL and press Enter.\newline \url{https://sourceforge.net/projects/dwsim/files/DWSIM/}
+
+\item Click on the folder with latest version. Currently it is DWSIM 5.7.
+
+\item Click on the folder with latest update. Currently it is Update 14.
+\item Click on "DWSIM\_v57u14\_macOS.zip"
+\item The file will be downloaded and saved in the default downloads folder.
+\item Locate the downloaded zip file from the downloads folder.
+\item Extract the zip file in the Desktop.
+\item Locate the extracted folder and open the folder.
+\item Double click on DWSIM.app
+\item If DWSIM opens on your machine, then this means that DWSIM is successfully installed.
+
+\end{enumerate}
+
+\section{Checking the installation}
+
+\begin{enumerate}
+
+\item To check the software installation, please follow these steps:
+\item For Windows: Go to DWSIM, right click on it and select "Run as administrator"
+\newline For Linux: Open a command terminal by pressing Ctrl+Alt+T and type "dwsim-classic"
+\newline For MacOS: Double click on DWSIM.app
+\item In Welcome to DWSIM window, click on the Samples under Quick Access.
+\item Click "Carbon Combustion.dwxml".
+\item Maximize the flowsheet window.
+\item Now press Solve Flowsheet button.
+\item Following message should be displayed after solving the flowsheet "The flowsheet was calculated successfully".
+
+\end{enumerate}
+
+\section{Resources to learn DWSIM}
+
+\begin{enumerate}
+
+\item \textbf{Spoken Tutorials}: \url{https://spoken-tutorial.org/tutorial-search/?search_foss=DWSIM&search_language=English}
+
+\item \textbf{DWSIM Flowsheeting Project}: \url{https://dwsim.fossee.in/flowsheeting-project/completed-flowsheet}
+
+\item \textbf{DWSIM Textbook Companion}: \url{https://dwsim.fossee.in/textbook-companion/completed-books}
+
+\item \textbf{DWSIM Forum}: \url{https://forums.fossee.in/filter/dwsim/}
+
+\item \textbf{Spoken Tutorial Forum}: \url{https://forums.spoken-tutorial.org/filter/DWSIM/}
+
+\end{enumerate}
+
+
+
+\end{document}
