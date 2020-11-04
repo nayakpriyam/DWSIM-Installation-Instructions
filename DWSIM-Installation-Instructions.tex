@@ -1,17 +1,29 @@
 \documentclass[12pt,a4paper]{article}
 \usepackage[hmargin=2cm,
-vmargin=3cm]{geometry}
+vmargin=2cm]{geometry}
 \usepackage{hyperref}
 \usepackage{authblk}
 \usepackage{blindtext}
 
+\usepackage{color}
+\usepackage{amsmath,graphicx,makeidx}
+\usepackage{lscape}
+\usepackage{fancyhdr}
+\addtolength{\headheight}{1.5cm} % make more space for the header
+\pagestyle{fancyplain} % use fancy for all pages except chapter start
+\lhead{\includegraphics[height=1.7cm]{FOSSEE-logo}} % left logo
+\rhead{\includegraphics[height=3.5cm]{DWSIM-logo}} % right logo
+\renewcommand{\headrulewidth}{0pt} % remove rule below header
+%\usepackage{lastpage}
+%\fancyfoot[C]{Page \thepage\ of \pageref{LastPage}}
+
 
 \begin{document}
 
-\title{Installation Sheet for DWSIM}
+\title{DWSIM Installation Manual}
 \author{DWSIM Team}
 \affil{FOSSEE, IIT Bombay}
-\affil{\url{contact-dwsim@fossee.in}}
+%\affil{\url{contact-dwsim@fossee.in}}
 \date{\today}
 
 \maketitle
@@ -20,7 +32,7 @@ vmargin=3cm]{geometry}
 
 \subsection*{OS:}
 
-Windows: 32/64-bit Vista/7/8/10
+Windows: 32/64-bit 7/8/10
 
 \noindent Linux: 64-bit x86 Ubuntu 12.04 or newer / 32-bit armhf Raspbian/Ubuntu MATE
 
@@ -28,9 +40,9 @@ Windows: 32/64-bit Vista/7/8/10
 
 \subsection*{Software:}
 
-Microsoft .NET Framework 4.6.1 or newer (Windows) 
+Microsoft .NET Framework 4.6.2 or newer (Windows) 
 
-\noindent Mono Framework 5.14.0 or newer (Linux)
+\noindent Mono Framework 6.8.0 or newer (Linux)
 
 \subsection*{CPU:}
 1.0 GHz dual-core processor (minimum)
@@ -49,7 +61,7 @@ Microsoft .NET Framework 4.6.1 or newer (Windows)
 
 \subsection*{Disk space:}	
 
-500 MB for program files
+750 MB for program files
 
 \section{The procedure to install DWSIM on Windows OS}
 
@@ -58,26 +70,27 @@ Microsoft .NET Framework 4.6.1 or newer (Windows)
 \item Open your default web browser.
 \item In the address bar, type the following URL and press Enter.\newline \url{https://sourceforge.net/projects/dwsim/files/DWSIM/}
 
-\item Click on the folder with latest version. Currently it is DWSIM 5.8.
+\item Click on the folder with latest version. Currently it is DWSIM 6.3.
 
-\item Click on the folder with latest update. Currently it is Update 11.
-\item Click on "DWSIM\_bin\_v58u11\_setup\_win7win8win10\_64bit.exe" (if it is 64 bit Operating System)
-\newline Click on "DWSIM\_bin\_v58u11\_setup\_win7win8win10\_32bit.exe" (if it is 32 bit Operating System)
+\item Click on the folder with latest update. Currently it is Update 2.
+\item Click on "DWSIM\_bin\_v63u2\_setup\_win7win8win10\_64bit.exe" (if it is 64 bit Operating System)
+\newline Click on "DWSIM\_bin\_v63u2\_setup\_win7win8win10\_32bit.exe" (if it is 32 bit Operating System)
 \item The .exe file gets downloaded and saved in the Downloads folder.
 \item Go to Downloads folder and double click on .exe file.
 \item In User Account Control window, click Yes.
 \item In Installer Language window,Click OK.
-\item DWSIM 5.5.8 Update 11 setup window appears. Click Next.
+\item DWSIM 6.3 Update 2 setup window appears. Click Next.
 \item In License Agreement section, click on I Agree.
 \item Click on Next.
 \item In Select components to install field, select all the components and click Next.
 \item Click on Next.
 \item Click on Install.
-\item In ChemSep 8.14 LITE Setup License Agreement section, click on I Agree.
+\item In ChemSep 8.23 LITE Setup License Agreement section, click on I Agree.
 \item Click on Next.
 \item Click on Next.
 \item Click on Install.
 \item Click on Next.
+\newpage
 \item Click on Finish.
 \item Click on Next.
 \item Under CAPE-OPEN libraries, check the Accept License Agreement check box.
@@ -98,18 +111,20 @@ Microsoft .NET Framework 4.6.1 or newer (Windows)
 \item Open your default web browser.
 \item In the address bar, type the following URL and press Enter.\newline \url{https://sourceforge.net/projects/dwsim/files/DWSIM/}
 
-\item Click on the folder with latest version. Currently it is DWSIM 5.8.
+\item Click on the folder with latest version. Currently it is DWSIM 6.3.
 
-\item Click on the folder with latest update. Currently it is Update 11.
-\item Click on "dwsim\_5.8.11-amd64.deb"
-\item The file will be downloaded and saved in the default downloads folder
-\item Install Mono Framework version 5.14 or newer
+\item Click on the folder with latest update. Currently it is Update 2.
+\item Click on "dwsim-wine\_v63u2.7z"
+\item The zip file will be downloaded and saved in the default downloads folder
+\item Locate the downloaded zip file from the downloads folder.
+\item Extract the files present in the zip file into the downloads folder.
+\item Install Mono Framework version 6.8.0 or newer
 \newline \url{https://www.mono-project.com/download/stable/#download-lin}
 
 \item Open the terminal by pressing Ctrl + Alt + T keys together.
 
 \item Type the below command and press enter
-\newline sudo gdebi dwsim\_5.8.11-amd64.deb
+\newline sudo gdebi dwsim\_6.3.2-amd64.deb
 
 \item In the terminal, type dwsim.
 \item If DWSIM opens on your machine, then this means that DWSIM is successfully installed.
@@ -123,10 +138,10 @@ Microsoft .NET Framework 4.6.1 or newer (Windows)
 \item Open your default web browser.
 \item In the address bar, type the following URL and press Enter.\newline \url{https://sourceforge.net/projects/dwsim/files/DWSIM/}
 
-\item Click on the folder with latest version. Currently it is DWSIM 5.8.
+\item Click on the folder with latest version. Currently it is DWSIM 6.3.
 
-\item Click on the folder with latest update. Currently it is Update 11.
-\item Click on "DWSIM\_v58u11\_macOS.zip"
+\item Click on the folder with latest update. Currently it is Update 2.
+\item Click on "DWSIM\_v63u2\_macOS.zip"
 \item The file will be downloaded and saved in the default downloads folder.
 \item Locate the downloaded zip file from the downloads folder.
 \item Extract the zip file in the Desktop.
@@ -151,7 +166,7 @@ Microsoft .NET Framework 4.6.1 or newer (Windows)
 \item Following message should be displayed after solving the flowsheet "The flowsheet was calculated successfully".
 
 \end{enumerate}
-
+\newpage
 \section{Resources to learn DWSIM}
 
 \begin{enumerate}
