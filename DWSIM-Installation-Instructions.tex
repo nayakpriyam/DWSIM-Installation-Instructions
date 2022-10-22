@@ -1,30 +1,43 @@
-\documentclass[12pt,a4paper]{article}
-\usepackage[hmargin=2cm,
-vmargin=2cm]{geometry}
+\documentclass[a4paper,12pt]{article}
+\usepackage{amssymb}
+\usepackage{graphicx}
 \usepackage{hyperref}
-\usepackage{authblk}
 \usepackage{blindtext}
 
 \usepackage{color}
-\usepackage{amsmath,graphicx,makeidx}
-\usepackage{lscape}
-\usepackage{fancyhdr}
-\addtolength{\headheight}{1.5cm} % make more space for the header
-\pagestyle{fancyplain} % use fancy for all pages except chapter start
-\lhead{\includegraphics[height=1.7cm]{FOSSEE-logo}} % left logo
-\rhead{\includegraphics[height=3.5cm]{DWSIM-logo}} % right logo
-\renewcommand{\headrulewidth}{0pt} % remove rule below header
-%\usepackage{lastpage}
-%\fancyfoot[C]{Page \thepage\ of \pageref{LastPage}}
+\usepackage{amsmath,geometry,makeidx}
+\topmargin -1.2in
+\textheight 11in
+\oddsidemargin -0.45in
+\evensidemargin 0in
+\textwidth 7in
+\footskip 0.5in
+\flushbottom
+
+\renewcommand\maketitle{%
+	\setlength\parindent{0pt}%
+	\begin{minipage}{\textwidth}
+		\begin{minipage}{.15\textwidth}
+			\includegraphics[height=1.7cm]{DWSIM-logo}
+		\end{minipage}%
+		\begin{minipage}{.7\textwidth}
+			\centering
+			Installation Sheet for DWSIM\par
+			DWSIM Team\par
+			FOSSEE, IIT Bombay
+		\end{minipage}%
+		\begin{minipage}{.15\textwidth}
+			\raggedright
+			\includegraphics[width=\linewidth]{FOSSEE-logo}
+		\end{minipage}%
+	\end{minipage}\vskip 2.5ex
+	\par
+	\hrule
+}
+
 
 
 \begin{document}
-
-\title{DWSIM Installation Manual}
-\author{DWSIM Team}
-\affil{FOSSEE, IIT Bombay}
-%\affil{\url{contact-dwsim@fossee.in}}
-\date{\today}
 
 \maketitle
 
@@ -68,20 +81,20 @@ Microsoft .NET Framework 4.6.2 or newer (Windows)
 \item Open your default web browser.
 \item In the address bar, type the following URL and press Enter.\newline \url{https://sourceforge.net/projects/dwsim/files/DWSIM/}
 
-\item Click on the folder with latest version. Currently it is DWSIM 7.3.
+\item Click on the folder with latest version. Currently it is DWSIM 8.0.
 
-\item Click on the folder with latest update. Currently it is 7.3.3.
-\item Click on "DWSIM\_bin\_v733\_setup\_win7win8win10\_64bit.exe" (if it is 64 bit Operating System)
-\newline Click on "DWSIM\_bin\_v733\_setup\_win7win8win10\_32bit.exe" (if it is 32 bit Operating System)
+\item Click on the folder with latest update. Currently it is 8.0.4.
+\item Click on "DWSIM\_bin\_v804\_setup\_win7win8win10\_64bit.exe" (if it is 64 bit Operating System)
+\newline Click on "DWSIM\_bin\_v804\_setup\_win7win8win10\_32bit.exe" (if it is 32 bit Operating System)
 \item The .exe file gets downloaded and saved in the Downloads folder.
 \item Go to Downloads folder and double click on .exe file.
 \item In User Account Control window, click Yes.
 \item In Installer Language window,Click OK.
-\item DWSIM 7.3.3 Setup window appears. Click Next.
+\item DWSIM 8.0.4 Setup window appears. Click Next.
 \item In License Agreement section, click on I Agree.
 \item Click on Next.
 \item In Select components to install field, select ALL the components and click Next.
-\item In the Destination Folder, change the path to C:\textbackslash Program Files\textbackslash DWSIM 7\textbackslash
+\item In the Destination Folder, change the path to C:\textbackslash Program Files\textbackslash DWSIM 8\textbackslash
 \item Click on Next.
 \item Click on Install.
 \item In ChemSep 8.27 LITE Setup License Agreement section, click on I Agree.
@@ -89,7 +102,6 @@ Microsoft .NET Framework 4.6.2 or newer (Windows)
 \item Click on Next.
 \item Click on Install.
 \item Click on Next.
-\newpage
 \item Click on Finish.
 \item Click on Next.
 \item Under CAPE-OPEN libraries, check the Accept License Agreement check box.
@@ -110,32 +122,26 @@ Microsoft .NET Framework 4.6.2 or newer (Windows)
 \item Open your default web browser.
 \item In the address bar, type the following URL and press Enter.\newline \url{https://sourceforge.net/projects/dwsim/files/DWSIM/}
 
-\item Click on the folder with latest version. Currently it is DWSIM 7.3.
+\item Click on the folder with latest version. Currently it is DWSIM 8.0.
 
-\item Click on the folder with latest update. Currently it is 7.3.3.
-\item Click on "dwsim\_7.3.3-amd64.deb"
+\item Click on the folder with latest update. Currently it is 8.0.4.
+\item Click on "dwsim\_8.0.4-amd64.deb"
 \item The file will be downloaded and saved in the default downloads folder
 %\item Locate the downloaded zip file from the downloads folder.
 %\item Extract the files present in the zip file into the downloads folder.
 \item Install Mono Framework version 6.8.0 or newer
 \newline \url{https://www.mono-project.com/download/stable/#download-lin}
 \item Follow the instructions given in the section and add the Mono repository to your system based on your OS version. 
-
 \item Once the Mono repository is added to your system, open the terminal by pressing Ctrl + Alt + T keys together.
-
-\item Change the directory using cd command to the location where the downloaded dwsim\_7.3.3-amd64.deb file is saved. For example, \textbf{cd Downloads}
-
-\newpage
-
+\item Change the directory using cd command to the location where the downloaded dwsim\_8.0.4-amd64.deb file is saved. For example, \textbf{cd Downloads}
 \item Type the below command and press enter
-\newline sudo gdebi dwsim\_7.3.3-amd64.deb
-
+\newline sudo gdebi dwsim\_8.0.4-amd64.deb
 \item In the terminal, type dwsim.
 \item If DWSIM opens on your machine, then this means that DWSIM is successfully installed.
 
 \end{enumerate}
 
-\noindent \textbf{NOTE:} This installation of DWSIM doesn't support use of Chemsep Distillation Column. To use Chemsep Distillation column in Linux OS, download the file DWSIM-wine\_v733.7z. Unzip the file and follow the instructions mentioned in the Readme file.
+\noindent \textbf{NOTE:} This installation of DWSIM doesn't support use of Chemsep Distillation Column. To use Chemsep Distillation column in Linux OS, download the file DWSIM-wine\_v755.7z. Unzip the file and follow the instructions mentioned in the Readme file.
 
 \section{Checking the installation}
 
@@ -157,17 +163,10 @@ Microsoft .NET Framework 4.6.2 or newer (Windows)
 \begin{enumerate}
 
 \item \textbf{Spoken Tutorials}: \url{https://spoken-tutorial.org/tutorial-search/?search_foss=DWSIM&search_language=English}
-
 \item \textbf{DWSIM Flowsheeting Project}: \url{https://dwsim.fossee.in/flowsheeting-project/completed-flowsheet}
-
-\item \textbf{DWSIM Textbook Companion}: \url{https://dwsim.fossee.in/textbook-companion/completed-books}
-
+\item \textbf{DWSIM Textbook Companion Project}: \url{https://dwsim.fossee.in/textbook-companion/completed-books}
 \item \textbf{DWSIM Forum}: \url{https://forums.fossee.in/filter/dwsim/}
-
 \item \textbf{Spoken Tutorial Forum}: \url{https://forums.spoken-tutorial.org/filter/DWSIM/}
-
 \end{enumerate}
-
-
 
 \end{document}
