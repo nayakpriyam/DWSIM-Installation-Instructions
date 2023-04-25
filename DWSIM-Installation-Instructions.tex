@@ -45,15 +45,17 @@
 
 \subsection*{OS:}
 
-Windows: 32/64-bit 7/8/10
+Windows: 32/64-bit 7/8/10/11
 
-\noindent Linux: 64-bit x86 Ubuntu 16.04 or newer / 32-bit armhf Raspbian/Ubuntu MATE
+\noindent Linux: 32/64-bit Wine-supported (https://www.winehq.org)
 
 \subsection*{Software:}
 
 Microsoft .NET Framework 4.6.2 or newer (Windows) 
 
 \noindent Mono Framework 6.8.0 or newer (Linux)
+
+\noindent Wine 3.0.3 or newer (Linux)
 
 \subsection*{CPU:}
 1.0 GHz dual-core processor (minimum)
@@ -79,38 +81,35 @@ Microsoft .NET Framework 4.6.2 or newer (Windows)
 \begin{enumerate}
 \item Please make sure that you meet the system requirements to be able to download and install DWSIM.
 \item Open your default web browser.
-\item In the address bar, type the following URL and press Enter.\newline \url{https://sourceforge.net/projects/dwsim/files/DWSIM/}
-
-\item Click on the folder with latest version. Currently it is DWSIM 8.0.
-
-\item Click on the folder with latest update. Currently it is 8.0.4.
-\item Click on "DWSIM\_bin\_v804\_setup\_win7win8win10\_64bit.exe" (if it is 64 bit Operating System)
-\newline Click on "DWSIM\_bin\_v804\_setup\_win7win8win10\_32bit.exe" (if it is 32 bit Operating System)
-\item The .exe file gets downloaded and saved in the Downloads folder.
+\item In the address bar, type the following URL and press Enter.\newline \url{https://sourceforge.net/projects/dwsim/}
+\item Click on \textbf{Download} button.
+\item The .exe file for the latest version of DWSIM gets downloaded and saved in the Downloads folder. Currently, it is version 8.4.3.
 \item Go to Downloads folder and double click on .exe file.
-\item In User Account Control window, click Yes.
-\item In Installer Language window,Click OK.
-\item DWSIM 8.0.4 Setup window appears. Click Next.
-\item In License Agreement section, click on I Agree.
-\item Click on Next.
-\item In Select components to install field, select ALL the components and click Next.
-\item In the Destination Folder, change the path to C:\textbackslash Program Files\textbackslash DWSIM 8\textbackslash
-\item Click on Next.
-\item Click on Install.
-\item In ChemSep 8.27 LITE Setup License Agreement section, click on I Agree.
-\item Click on Next.
-\item Click on Next.
-\item Click on Install.
-\item Click on Next.
-\item Click on Finish.
-\item Click on Next.
-\item Under CAPE-OPEN libraries, check the Accept License Agreement check box.
-\item Click on Next.
-\item Click on Next.
-\item Click on Install.
-\item Click on Finish.
-\item Click on Next.
-\item Click on Finish.
+\item In User Account Control window, click \textbf{Yes}.
+\item In Installer Language window, English is displayed. Click \textbf{OK}.
+\item DWSIM 8.4.3 Setup window appears. Click \textbf{Next}.
+\item In License Agreement section, click on \textbf{I Agree}.
+\item Click on \textbf{Next}.
+\item In Select components to install field, select ALL the components including \textbf{Microsoft WebView2 Runtime, ChemSep 8.32, CAPE-OPEN Type Libraries, Register Type Libraries} and click \textbf{Next}.
+\item In the Destination Folder, change the path to \textbf{C:\textbackslash Program Files\textbackslash DWSIM}.
+\item Ensure that the new destination is displayed as \textbf{C:\textbackslash Program Files\textbackslash DWSIM}.
+\item Click on \textbf{Next}.
+\item Click on \textbf{Install}.
+\item Wait for a few seconds for the installation to complete and \textbf{ChemSep 8.32 LITE Setup} window to appear.
+\item In \textbf{ChemSep 8.32 LITE Setup License Agreement} section, click on \textbf{I Agree}.
+\item Click on \textbf{Next}.
+\item Click on \textbf{Next}.
+\item Click on \textbf{Install}.
+\item Click on \textbf{Next}.
+\item Click on \textbf{Finish}.
+\item Click on \textbf{Next}.
+\item Under \textbf{CAPE-OPEN libraries}, check the Accept License Agreement check box.
+\item Click on \textbf{Next}.
+\item Click on \textbf{Next}.
+\item Click on \textbf{Install}.
+\item Click on \textbf{Finish}.
+\item Click on \textbf{Next}.
+\item Click on \textbf{Finish}.
 \item DWSIM is successfully installed.
 
 \end{enumerate}
@@ -120,28 +119,24 @@ Microsoft .NET Framework 4.6.2 or newer (Windows)
 \begin{enumerate}
 \item Please make sure that you meet the system requirements to be able to download and install DWSIM.
 \item Open your default web browser.
-\item In the address bar, type the following URL and press Enter.\newline \url{https://sourceforge.net/projects/dwsim/files/DWSIM/}
-
-\item Click on the folder with latest version. Currently it is DWSIM 8.0.
-
-\item Click on the folder with latest update. Currently it is 8.0.4.
-\item Click on "dwsim\_8.0.4-amd64.deb"
-\item The file will be downloaded and saved in the default downloads folder
+\item In the address bar, type the following URL and press Enter.\newline \url{https://sourceforge.net/projects/dwsim/}
+\item Click on \textbf{Download} button.
+\item The .deb file for the latest version of DWSIM gets downloaded and saved in the default Downloads folder. Currently, it is version 8.4.3.
 %\item Locate the downloaded zip file from the downloads folder.
 %\item Extract the files present in the zip file into the downloads folder.
 \item Install Mono Framework version 6.8.0 or newer
 \newline \url{https://www.mono-project.com/download/stable/#download-lin}
 \item Follow the instructions given in the section and add the Mono repository to your system based on your OS version. 
 \item Once the Mono repository is added to your system, open the terminal by pressing Ctrl + Alt + T keys together.
-\item Change the directory using cd command to the location where the downloaded dwsim\_8.0.4-amd64.deb file is saved. For example, \textbf{cd Downloads}
+\item Change the directory using cd command to the location where the downloaded dwsim\_8.4.3-amd64.deb file is saved. For example, \textbf{cd Downloads}
 \item Type the below command and press enter
-\newline sudo gdebi dwsim\_8.0.4-amd64.deb
-\item In the terminal, type dwsim.
+\newline \textbf{sudo gdebi dwsim\_8.4.3-amd64.deb}
+\item In the terminal, type \textbf{dwsim}.
 \item If DWSIM opens on your machine, then this means that DWSIM is successfully installed.
 
 \end{enumerate}
 
-\noindent \textbf{NOTE:} This installation of DWSIM doesn't support use of Chemsep Distillation Column. To use Chemsep Distillation column in Linux OS, download the file DWSIM-wine\_v755.7z. Unzip the file and follow the instructions mentioned in the Readme file.
+\noindent \textbf{NOTE:} This installation of DWSIM doesn't support use of Chemsep Distillation Column. To use Chemsep Distillation column in Linux OS, download the file DWSIM-wine\_v843.7z. Unzip the file and follow the instructions mentioned in the Readme file.
 
 \section{Checking the installation}
 
