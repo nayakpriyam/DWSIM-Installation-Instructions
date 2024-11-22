@@ -50,6 +50,8 @@ Windows: 32/64-bit 7/8/10/11
 
 \noindent Linux: 32/64-bit Wine-supported (https://www.winehq.org)
 
+\noindent macOS: 10.7 (OS X Lion) or newer
+
 \subsection*{Software:}
 
 Microsoft .NET Framework 4.6.2 or newer (Windows) 
@@ -84,35 +86,31 @@ Microsoft .NET Framework 4.6.2 or newer (Windows)
 \item Open your default web browser.
 \item In the address bar, type the following URL and press Enter.\newline \url{https://sourceforge.net/projects/dwsim/}
 \item Click on \textbf{Download} button.
-\item The .exe file for the latest version of DWSIM gets downloaded and saved in the Downloads folder. Currently, it is version 8.7.1.
+\item The .exe file for the latest version of DWSIM gets downloaded and saved in the Downloads folder. Currently, it is version 8.8.3.
 \item Go to Downloads folder and double click on .exe file.
 \item In User Account Control window, click \textbf{Yes}.
 \item In Installer Language window, English is displayed. Click \textbf{OK}.
-\item DWSIM 8.7.1 Setup window appears. Click \textbf{Next}.
+\item DWSIM 8.8.3 Setup window appears. Click \textbf{Next}.
 \item In License Agreement section, click on \textbf{I Agree}.
 \item Click on \textbf{Next}.
 \item In Select components to install field, select ALL the components including \textbf{Microsoft WebView2 Runtime, ChemSep, CAPE-OPEN Type Libraries, Register Type Libraries} as shown below and click \textbf{Next}.
-
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.75\linewidth]{DWSIM-Components.png}
-%	\caption{}
-%	\label{fig:hu-conn}
-\end{figure}
-
-\item In the Destination Folder, change the path to \textbf{C:\textbackslash Program Files\textbackslash DWSIM}.
-\item Ensure that the new destination is displayed as \textbf{C:\textbackslash Program Files\textbackslash DWSIM} as shown below.
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.75\linewidth]{DWSIM-Location.png}
+	\includegraphics[width=0.7\linewidth]{DWSIM-Components.png}
 	%	\caption{}
 	%	\label{fig:hu-conn}
 \end{figure}
-
+\item In the Destination Folder, change the path to \textbf{C:\textbackslash Program Files\textbackslash DWSIM}.
+\item Ensure that the new destination is displayed as \textbf{C:\textbackslash Program Files\textbackslash DWSIM} as shown below.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{DWSIM-Location.png}
+	%	\caption{}
+	%	\label{fig:hu-conn}
+\end{figure}
 \item Click on \textbf{Next}.
 \item Click on \textbf{Install}.
-\item Wait for a few seconds for the installation to complete and \textbf{ChemSep 8.42 LITE Setup} window to appear.
+\item Wait for a few minutes for the installation to complete and \textbf{ChemSep 8.42 LITE Setup} window to appear.
 \item In \textbf{ChemSep 8.42 LITE Setup License Agreement} section, click on \textbf{I Agree}.
 \item Click on \textbf{Next}.
 \item Click on \textbf{Next}.
@@ -138,29 +136,41 @@ Microsoft .NET Framework 4.6.2 or newer (Windows)
 \item Open your default web browser.
 \item In the address bar, type the following URL and press Enter.\newline \url{https://sourceforge.net/projects/dwsim/}
 \item Click on \textbf{Download} button.
-\item The .deb file for the latest version of DWSIM gets downloaded and saved in the default Downloads folder. Currently, it is version 8.7.1.
+\item The .deb file for the latest version of DWSIM gets downloaded and saved in the default Downloads folder. Currently, it is version 8.8.3.
 %\item Locate the downloaded zip file from the downloads folder.
 %\item Extract the files present in the zip file into the downloads folder.
 \item Install Mono Framework version 6.8.0 or newer
 \newline \url{https://www.mono-project.com/download/stable/#download-lin}
 \item Follow the instructions given in the section and add the Mono repository to your system based on your OS version. 
 \item Once the Mono repository is added to your system, open the terminal by pressing Ctrl + Alt + T keys together.
-\item Change the directory using cd command to the location where the downloaded dwsim\_8.7.1-amd64.deb file is saved. For example, \textbf{cd Downloads}
+\item Change the directory using cd command to the location where the downloaded dwsim\_8.8.3-amd64.deb file is saved. For example, \textbf{cd Downloads}
 \item Type the below command and press enter
-\newline \textbf{sudo gdebi dwsim\_8.7.1-amd64.deb}
+\newline \textbf{sudo gdebi dwsim\_8.8.3-amd64.deb}
 \item In the terminal, type \textbf{dwsim}.
 \item If DWSIM opens on your machine, then this means that DWSIM is successfully installed.
 
 \end{enumerate}
 
-\noindent \textbf{NOTE:} This installation of DWSIM doesn't support use of Chemsep Distillation Column. To use Chemsep Distillation column in Linux OS, download the file DWSIM-wine\_v871.7z. Unzip the file and follow the instructions mentioned in the Readme file.
+\noindent \textbf{NOTE:} This installation of DWSIM doesn't support use of Chemsep Distillation Column. To use Chemsep Distillation column in Linux OS, download the file DWSIM-wine\_v883.7z. Unzip the file and follow the instructions mentioned in the Readme file.
+
+\section{The procedure to install DWSIM on macOS}
+
+\begin{enumerate}
+	\item Please make sure that you meet the system requirements to be able to download and install DWSIM.
+	\item Open your default web browser.
+	\item In the address bar, type the following URL and press Enter.\newline \url{https://sourceforge.net/projects/dwsim/}
+	\item Click on \textbf{Download} button.
+	\item The .dmg file for the latest version of DWSIM gets downloaded and saved in the default Downloads folder. Currently, it is version 8.8.3.
+	\item Open the .dmg file and DWSIM GUI will open.
+\end{enumerate}
+
 
 \section{Checking the installation}
 
 \begin{enumerate}
 
 \item To check the software installation, please follow these steps:
-\item For Windows: Go to DWSIM, right click on it and select "Run as administrator"
+\item For Windows: Go to DWSIM icon in your desktop, double click on it
 \newline For Linux: Open a command terminal by pressing Ctrl+Alt+T and type "dwsim-classic"
 \item In Welcome to DWSIM window, click on the Samples under Quick Access.
 \item Click "Carbon Combustion.dwxml".
@@ -177,7 +187,7 @@ Microsoft .NET Framework 4.6.2 or newer (Windows)
 \item \textbf{Spoken Tutorials}: \url{https://spoken-tutorial.org/tutorial-search/?search_foss=DWSIM&search_language=English}
 \item \textbf{DWSIM Flowsheeting Project}: \url{https://dwsim.fossee.in/flowsheeting-project/completed-flowsheet}
 \item \textbf{DWSIM Textbook Companion Project}: \url{https://dwsim.fossee.in/textbook-companion/completed-books}
-\item \textbf{DWSIM Forum}: \url{https://forums.fossee.in/filter/dwsim/}
+%\item \textbf{DWSIM Forum}: \url{https://forums.fossee.in/filter/dwsim/}
 \item \textbf{Spoken Tutorial Forum}: \url{https://forums.spoken-tutorial.org/filter/DWSIM/}
 \end{enumerate}
 
